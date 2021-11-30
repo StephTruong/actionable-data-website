@@ -1,0 +1,791 @@
+ <!-- FlatFy Theme - Andrea Galanti /-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <a name="author" content="">
+
+    <title>Actionable Data For Your Business</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <!-- Custom Google Web Font -->
+    <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<!--     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'> -->
+
+    <link href='static/css/lato_font.css' rel='stylesheet' type='text/css'>
+    <link href='static/css/arvo_font.css' rel='stylesheet' type='text/css'>
+<!-- 	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+ -->	
+    <!-- Custom CSS-->
+    <link href="static/css/general.css" rel="stylesheet">
+	
+	 <!-- Owl-Carousel -->
+    <link href="static/css/custom.css" rel="stylesheet">
+	<link href="static/css/owl.carousel.css" rel="stylesheet">
+    <link href="static/css/owl.theme.css" rel="stylesheet">
+	<link href="static/css/style.css" rel="stylesheet">
+	<link href="static/css/animate.css" rel="stylesheet">
+	
+	<!-- Magnific Popup core CSS file -->
+	<link rel="stylesheet" href="static/css/magnific-popup.css"> 
+	
+	<script src="static/js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
+	<!--[if IE 9]>
+		<script src="js/PIE_IE9.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="js/PIE_IE678.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<!-- <link rel="shortcut icon" href="static/logo.ico"> -->
+
+<!-- start Google Analytics -->
+<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-82421063-1', 'auto');
+   ga('send', 'pageview');
+
+</script>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("7560d5ba019aa3934736b34ab102509f");</script><!-- end Mixpanel -->
+
+
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='127566798-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+
+</head>
+
+<body id="home">
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="status"></div>
+	</div>
+	
+	<!-- FullScreen -->
+    <div class="intro-header">
+		<div class="col-xs-12 text-center abcen1">
+			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Actionable Data</h1>
+			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Valuable insights to boost your business</h3>
+
+			<!-- <ul class="list-inline intro-social-buttons">
+				<li><a href="https://cn.linkedin.com/in/truongstephane" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">LinkedIn</span></a>
+				</li> -->
+		<!-- 		<li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Free Download</span></a>
+				</li> -->
+			</ul>
+		</div>    
+        <!-- /.container -->
+		<div class="col-xs-12 text-center abcen wow fadeIn">
+			<div class="button_down "> 
+				<a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#services"> <img class="img_scroll" src="static/img/icon/circle.png" alt=""> </a>
+			</div>
+		</div>
+    </div>
+	
+	<!-- NavBar-->
+	<nav class="navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#home">Actionable Data</a>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					
+					<li class="menuItem"><a href="#services">Approach</a></li>
+					<li class="menuItem"><a href="#projects">Projects</a></li>
+				    <li class="menuItem"><a href="#about">About</a></li> 
+					<li class="menuItem"><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		   
+		</div>
+	</nav> 
+	<!-- Intro -->
+		<div  class="content-section-a ">
+		<div class="container">
+			<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center">
+				<h3>We are a Data Science consulting agency in Shanghai.</h3>
+				<p class="lead" style="margin-top:0">We turn your company data into valuable insights.</p>
+			 </div>
+			<!-- <div class="col-md-6 col-md-offset-3 text-center">
+				<div class="mockup-content">
+						<div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1">
+							<button type="button "><span>Subscribe to our Newsletter</span></button>
+							<div class="morph-content">
+								<div>
+									<div class="content-style-form content-style-form-4 ">
+										<h2 class="morph-clone">Subscribe to our Newsletter</h2>
+										<form>
+											<p><label>Your Email Address</label><input type="text"/></p>
+											<p><button>Subscribe me</button></p>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>	 -->
+			</div>
+		</div>
+	</div>	
+	
+	<!--Services -->
+	<div id="services" class="content-section-b" style="border-top: 0">
+		<div class="container">
+
+			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h3>Our approach</h3>
+				<p class="lead" style="margin-top:0"> </p>
+				
+			</div>
+			
+			<div class="row">
+			
+				<div class="col-sm-4 wow fadeInDown text-center">
+				  <img class="rotate" src="static/img/icon/target2.png" alt="Generic placeholder image">
+				  <h3>Focus</h3>
+				  <p class="lead"> Be data driven and look at the data to drive your decisions. To do so, you must start by defining good questions to build products with measurability in mind. Research design helps us frame the context and the challenges to achieve your goals.</p>
+
+				  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+				</div><!-- /.col-lg-4 -->
+				
+				<div class="col-sm-4 wow fadeInDown text-center">
+				  <img  class="rotate" src="static/img/icon/stopwatch.svg" alt="Generic placeholder image">
+				   <h3>Take Control</h3>
+				   <p class="lead">Get your data ready to be processed with the state of the art technologies. Cloud computing provides security and scalability without the upfront costs of a traditional hosted server. <!-- Hadoop, Spark, Cassandra, MongoDb, Hive, Shark, Kafka, Linux, Azure Cloud, Amazon Web Service, IBM Softlayer, Ali Cloud --> </p>
+				   <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+				</div><!-- /.col-lg-4 -->
+				
+				<div class="col-sm-4 wow fadeInDown text-center">
+				  <img  class="rotate" src="static/img/icon/tactics.svg" alt="Generic placeholder image">
+				   <h3>Discover</h3>
+					<p class="lead">Take your data to the next level with smart machine learning algorithms. While leveraging those powerful tools, we keep the business needs as our primary goal. Insights without business focus are not worth your investment.
+<!-- Python, Scikit-Learn, Spark MLlib, R, 
+ -->						 </p>
+				  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+				</div><!-- /.col-lg-4 -->
+				
+			</div><!-- /.row -->
+				
+			<div class="row tworow">
+			
+				<div class="col-sm-4  wow fadeInDown text-center">
+				  <img class="rotate" src="static/img/icon/retina.svg" alt="Generic placeholder image">
+				  <h3>Validate</h3>
+				  <p class="lead">Correlation does not imply causation! The latest advance in machine learning has brought tremendous value for businesses but only correlation can be drawn with those techniques. Validate your finding with scientific experimentations that help drive your business smarter.
+
+<!-- R, Hypothesis Testing, Google Experiments, Mixpanel, Splitforce  --></p>
+				 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+				</div><!-- /.col-lg-4 -->
+				
+				<div class="col-sm-4 wow fadeInDown text-center">
+				  <img  class="rotate" src="static/img/icon/bulb.svg" alt="Generic placeholder image">
+				   <h3>Enlighten</h3>
+				   <p class="lead">A good data visualization is all about telling a story. It involves not only understanding the data itself, but why it is important for the business. Leveraging the latest technology to produce actionable insights requires a deeper understanding of why the story is important to the user and what questions and exploration the user may want to do as a result of their initial insights. </p>
+				   <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+				</div><!-- /.col-lg-4 -->
+				
+				
+				  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+				</div><!-- /.col-lg-4 -->
+				
+			</div><!-- /.row -->
+		</div>
+	</div>
+
+	<!-- Projects -->
+
+
+    <div id ="projects" class="content-section-a">
+
+        <div class="container">
+			
+            <div class="row">
+			
+				<div class="col-sm-6 pull-right wow fadeInRightBig">
+                    <img class="img-responsive " src="static/img/fakefans.png" alt="">
+                </div>
+				
+                <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
+                    <h3 class="section-heading"> Featured Project: Detecting fake fans on Chinese Social Media Platform</h3>
+					<div class="sub-title lead3"> Bring transparency to online communities</div>
+                    <p class="lead">
+						Robin8 is an innovative social media platform connecting brands to social network KOLs. Leveraging big data and machine learning algorithm, we develop a new engine to identify fake Weibo accounts. In an age where a KOL’s fans number translates into a monetizeable ressource, a fake account detector is bringing more transparency to Robin8's platform. 
+		</p>
+
+					 <!-- <p><a id="portfolioModal1Button" class="btn btn-embossed btn-primary" data-target="#portfolioModal1" type="button" data-toggle="modal" role="button">View Details</a> -->
+					 <a class="btn btn-embossed btn-info" href="http://www.robin8.net" role="button">Visit Website</a></p>
+				</div>   
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+
+        <div id ="projects" class="content-section-b">
+
+        <div class="container">
+			
+            <div class="row">
+			
+				<div class="col-sm-6 pull-left wow fadeInLeftBig">
+                    <img class="img-responsive " src="static/img/guitarapp.png" alt="">
+                </div>
+				
+                <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">   
+                    <h3 class="section-heading"> Featured Project: Guitar Teaching App</h3>
+					<div class="sub-title lead3"> Learn how to play guitar anywhere</div>
+                    <p class="lead">
+						Leveraging sound signal processing and deep learning neural networks, we build an app that captures sound played on a guitar and provides live feedback to the player. No special hardware needed, anyone can learn guitar by playing their favorite songs.
+		</p>
+
+					 <!-- <p><a id="portfolioModal1Button" class="btn btn-embossed btn-primary" data-target="#portfolioModal1" type="button" data-toggle="modal" role="button">View Details</a> -->
+					<!--  <a class="btn btn-embossed btn-info" href="http://www.beachcreative.com" role="button">Visit Website</a></p> -->
+				</div>   
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+       <div id ="projects" class="content-section-a">
+
+        <div class="container">
+			
+            <div class="row">
+			
+				<div class="col-sm-6 pull-right wow fadeInRightBig">
+                    <img class="img-responsive " src="static/img/jobfiction.jpg" alt="">
+                </div>
+				
+                <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
+                    <h3 class="section-heading"> Featured Project: Job Fiction</h3>
+					<div class="sub-title lead3"> A new way to find your ideal job</div>
+                    <p class="lead">
+						Typical job search tools allow you to search on keywords, but keywords like analyst or data do not bring back the jobs you are really looking for. And your perfect job may have a title different than anything you would have considered. Most job search tools are also not flexible to what you want – every job seeker is looking for something a bit different. Jobfiction is a new revolutionary job search engine that will help you to find the job of your dream. 
+		</p>
+
+					 <p><a id="portfolioModal1Button" class="btn btn-embossed btn-primary" data-target="#portfolioModal1" type="button" data-toggle="modal" role="button">View Details</a>
+<!-- 					 <a class="btn btn-embossed btn-info" href="http://www.jobfiction.co" role="button">Visit Website</a></p>
+ -->				</div>   
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+$("#portfolioModal1Button").click(function(){
+mixpanel.track('Clicked Portfolio Modal 1 Link'); 
+});
+});
+</script>
+   <!--  <div class="content-section-b"> 
+		
+		<div class="container">
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeftBig">
+
+                     <div id="owl-demo-1" class="owl-carousel">
+						<a href="static/img/iphone.png" class="image-link">
+							<div class="item">
+								<img  class="img-responsive img-rounded" src="static/img/iphone.png" alt="">
+							</div>
+						</a>
+						<a href="static/img/iphone.png" class="image-link">
+							<div class="item">
+								<img  class="img-responsive img-rounded" src="static/img/iphone.png" alt="">
+							</div>
+						</a>
+						<a href="static/img/iphone.png" class="image-link">
+							<div class="item">
+								<img  class="img-responsive img-rounded" src="static/img/iphone.png" alt="">
+							</div>
+						</a>
+					</div>       
+                </div>
+				
+                <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">   
+                    <h3 class="section-heading">Drag Gallery</h3>
+					<div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div>
+                    <p class="lead">
+						In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. 
+						Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur, 
+						uam non erat mirum sapientiae lorem cupido
+						patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.
+					</p>
+
+					 <p><a class="btn btn-embossed btn-primary" href="#" role="button">View Details</a> 
+					 <a class="btn btn-embossed btn-info" href="#" role="button">Visit Website</a></p>
+				</div>  			
+			</div>
+        </div>
+    </div> -->
+<!-- 
+    <div class="content-section-a">
+
+        <div class="container">
+
+             <div class="row">
+			 
+				<div class="col-sm-6 pull-right wow fadeInRightBig">
+                    <img class="img-responsive " src="static/img/doge.png" alt="">
+                </div>
+			 
+                <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
+                    <h3 class="section-heading">Font Awesome & Glyphicon</h3>
+                    <p class="lead">A special thanks to Death to the Stock Photo for 
+					providing the photographs that you see in this template. 
+					</p>
+					
+					<ul class="descp lead2">
+						<li><i class="glyphicon glyphicon-signal"></i> Reliable and Secure Platform</li>
+						<li><i class="glyphicon glyphicon-refresh"></i> Everything is perfectly orgainized for future</li>
+						<li><i class="glyphicon glyphicon-headphones"></i> Attach large file easily</li>
+					</ul>
+				</div>           
+            </div>
+        </div>
+
+    </div>
+ -->
+
+ <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <!-- <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Job Fiction</h2>
+                            <p class="item-intro text-muted">A new way to find your ideal job</p>
+                            <img class="img-responsive img-centered" src="static/img/jobfiction-modal.jpg" alt="">
+                            <h3>Focus</h3>
+				   			<p class="lead">The idea of this project spark out of an overall feeling as Data Scientist on the lookout for a suitable position. In the current situation the job title of Data Scientist can mean anything ranging from Data Analyst to Senior Director of Analytics. To fix this pain point we have released a search engine that extracts and matches keywords instead of a mere job title. Our product lets the user easily submit the most relevant keywords and discover job ads that matches those keywords. The results are sometimes surprising as we are to able discover suitable job positions with high ranked job title.</p>
+				   		    <h3>Take Control</h3>
+				   			<p class="lead">To achieve this we spin out a Linux server with MongoDB. The job extraction task is written in Python with the help of the Indeed API. Extracting relevant keyword is not an easy feat but by leveraging MAUI Indexer, a NLP keyword extraction tool, we obtain highly satisfying results. </p>
+                            <h3>Discover</h3>
+				   			<p class="lead"> The recommender systems we use to feed results is based on a Latent Dirichlet Allocation algorithm with the GenSim library. By classifying jobs from our database into several topics and by passing through multiple Expectation Maximization pass, the system is able to recommend jobs with great accuracy.</p>
+				   			<h3>Enlighten</h3>
+				   			<p class="lead"> The end product is a fully functional website build on Flask back end and a Bootstrap/HTML5 front end. We use D3.js to build some visualizations that makes the results more compelling.</p>
+				   			
+				   			<p>
+                            <a class="btn btn-embossed btn-info" href="http://www.jobfiction.co" >Visit Website</a>
+                            <!-- <button class="btn btn-embossed btn-primary" type="button" class="close" data-dismiss="modal" >Close</button> -->
+                            <a class="btn btn-embossed btn-primary" data-dismiss="modal" role="button"><i class="fa fa-times"></i> Close Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<!-- Screenshot -->
+	<!-- <div id="screen" class="content-section-b">
+        <div class="container">
+          <div class="row" >
+			 <div class="col-md-6 col-md-offset-3 text-center wrap_title ">
+				<h2>Screen App</h2>
+				<p class="lead" style="margin-top:0">A special thanks to Death.</p>
+			 </div>
+		  </div>
+		    <div class="row wow bounceInUp" >
+              <div id="owl-demo" class="owl-carousel">
+				
+				<a href="static/img/slide/1.png" class="image-link">
+					<div class="item">
+						<img  class="img-responsive img-rounded" src="static/img/slide/1.png" alt="Owl Image">
+					</div>
+				</a>
+				
+               <a href="static/img/slide/2.png" class="image-link">
+					<div class="item">
+						<img  class="img-responsive img-rounded" src="static/img/slide/2.png" alt="Owl Image">
+					</div>
+				</a>
+				
+				<a href="static/img/slide/3.png" class="image-link">
+					<div class="item">
+						<img  class="img-responsive img-rounded" src="static/img/slide/3.png" alt="Owl Image">
+					</div>
+				</a>
+				
+				<a href="static/img/slide/1.png" class="image-link">
+					<div class="item">
+						<img  class="img-responsive img-rounded" src="static/img/slide/1.png" alt="Owl Image">
+					</div>
+				</a>
+				
+               <a href="static/img/slide/2.png" class="image-link">
+					<div class="item">
+						<img  class="img-responsive img-rounded" src="static/img/slide/2.png" alt="Owl Image">
+					</div>
+				</a>
+				
+				<a href="static/img/slide/3.png" class="image-link">
+					<div class="item">
+						<img  class="img-responsive img-rounded" src="static/img/slide/3.png" alt="Owl Image">
+					</div>
+				</a>
+              </div>       
+          </div>
+        </div>
+
+
+	</div> -->
+
+
+	 <!-- Clients Aside -->
+    <aside class="clients">
+		<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+			<h3>Our Clients</h3>
+			<p class="lead" style="margin-top:0"> </p>
+			
+		</div>
+
+		<div class="container">
+    <div class="row imagetiles">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <img src=static/img/CSP.jpg class="img-responsive">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <img src=static/img/zimocity.jpg class="img-responsive">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <img src=static/img/beachcreative.png class="img-responsive">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <img src=static/img/ef.jpg class="img-responsive">
+        </div>
+    </div>
+        <div class="row imagetiles">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <img src=static/img/lisiauto.jpg class="img-responsive">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <img src=static/img/robin8.png class="img-responsive">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <img src=static/img/dyson.png class="img-responsive">
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <img src=static/img/kargo.jpg class="img-responsive">
+        </div>
+    </div>
+</div>
+
+
+
+    </aside>
+	
+	<!-- About -->
+	<div id="about" class="content-section-a">
+		<div class="container">
+			<div class="row">
+			
+			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h3>About</h3>
+				<p class="lead" style="margin-top:0"></p>
+			 </div>
+			 
+				<div class="col-sm-6  block wow bounceIn">
+					<div class="row">
+						<div class=" team-member"> 
+				            <img src="static/img/stephane.jpg" class="img-responsive img-circle" alt="">
+
+						</div>
+						<div class="col-md-8 box-ct">
+							<h3> Stéphane Truong </h3>
+							<p> Stéphane is a consultant in Data Science working for various companies in Shanghai, China. He holds a Master degree in Data Science from the University of California, Berkeley. He has many years of experience in analytics leveraging machine learning at scale and communicating actionable results to the leadership.</p>
+						<ul class="list-inline social-buttons">
+                            <li><a href="https://cn.linkedin.com/in/truongstephane"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+						</div>
+
+				  </div>
+			  </div>
+			 <!--  <div class="col-sm-6 block wow bounceIn">
+					<div class="row">
+					  <div class="col-md-4 box-icon rotate"> 
+						<i class="fa fa-picture-o fa-4x "> </i> 
+					  </div>
+					  <div class="col-md-8 box-ct">
+						<h3> Owl-Carousel </h3>
+						<p> Nullam mo  arcu ac molestie scelerisqu vulputate, molestie ligula gravida, tempus ipsum.</p> 
+					  </div>
+					</div>
+			  </div> -->
+		  </div>
+		  
+		  <!-- <div class="row tworow">
+				<div class="col-sm-6  block wow bounceIn">
+					<div class="row">
+						<div class="col-md-4 box-icon rotate"> 
+							<i class="fa fa-magic fa-4x "> </i> 
+						</div>
+						<div class="col-md-8 box-ct">
+							<h3> Codrops </h3>
+							<p> Lorem ipsum dolor sit ametconsectetur adipiscing elit. Suspendisse orci quam. </p>
+						</div>
+				  </div>
+			  </div>
+			  <div class="col-sm-6 block wow bounceIn">
+					<div class="row">
+					  <div class="col-md-4 box-icon rotate"> 
+						<i class="fa fa-heart fa-4x "> </i> 
+					  </div>
+					  <div class="col-md-8 box-ct">
+						<h3> Lorem Ipsum</h3>
+						<p> Nullam mo  arcu ac molestie scelerisqu vulputate, molestie ligula gravida, tempus ipsum.</p> 
+					  </div>
+					</div>
+			  </div>
+		  </div> -->
+		</div>
+	</div>
+	
+	<!-- Banner Download -->
+	<!-- <div id="downloadlink" class="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h2>Download Free</h2>
+				<p class="lead" style="margin-top:0">Pay with a Tweet</p>
+				<p><a class="btn btn-embossed btn-primary view" role="button">Free Download</a></p> 
+			 </div>
+			</div>
+		</div>
+	</div>
+	 -->
+	<!-- Contact -->
+	<!-- <div id="contact" class="content-section-a">
+		{% if scroll %}
+			<script>
+			    // document.getElementById('contact').scrollIntoView();
+			    document.location.hash = '#' + '{{ scroll }}';
+			</script>
+			{% endif %}
+
+		<div class="container">
+			<div class="row">
+			
+			<div class="col-md-12  text-center wrap_title">
+				<h2>Want more info?</h2>
+			</div>
+			  
+		
+		<div class="col-md-12">
+					
+			<form role="form" action="/home/contact" method="post" onsubmit="document.location.href='thispage.html#contact'">
+				{% if success %}
+				<div class="form-group">
+				 <div>Thank you for your message. We'll get back to you shortly.</div>
+				</div>
+			  	{% else %}
+				{{ form.hidden_tag() }}
+			      <div class="form-group">
+					  {{ form.name.label }}
+					  	{% for message in form.name.errors %}
+						  <div class="flash">{{ message }}</div>
+					 	{% endfor %}
+			          {{ form.name (class_="form-control")}}
+			       </div>
+			       <div class="form-group">
+			     
+			          {{ form.email.label }}
+			            {% for message in form.email.errors %}
+					   		<div class="flash">{{ message }}</div>
+						{% endfor %}
+			          {{ form.email (class_="form-control")}}
+			        </div>
+			        <div class="form-group">
+			          {{ form.message.label }}
+				        {% for message in form.message.errors %}
+						  <div class="flash">{{ message }}</div>
+						{% endfor %}
+			          {{ form.message (class_="form-control",rows='10')}}
+			        </div>
+			        <div class="form-group">
+			          {{ form.submit (class_="btn wow tada btn-embossed btn-primary pull-center", id_="submit")}}
+			        </div>
+			   {% endif %}
+		</div>
+		
+
+
+			<script type="text/javascript">
+			$(document).ready(function(){
+			$("#submit").click(function(){
+			mixpanel.track('Submitted a message'); 
+			});
+			});
+			</script>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="InputName">Your Name</label>
+						<div class="input-group">
+							<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+							<span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="InputEmail">Your Email</label>
+						<div class="input-group">
+							<input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
+							<span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="InputMessage">Message</label>
+						<div class="input-group">
+							<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+							<span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+
+					<input type="submit" name="submit" id="submit" value="Submit" class="btn wow tada btn-embossed btn-primary pull-center">
+				</div>
+			</form>
+			
+			<!-- <hr class="featurette-divider hidden-lg"> -->
+				<!-- <div class="col-md-5 col-md-push-1 address">
+					<address>
+					<h3>Office Location</h3>§
+					<p class="lead"><a href="https://www.google.com/maps/preview?ie=UTF-8&q=The+Pentagon&fb=1&gl=us&hq=1400+Defense+Pentagon+Washington,+DC+20301-1400&cid=12647181945379443503&ei=qmYfU4H8LoL2oATa0IHIBg&ved=0CKwBEPwSMAo&safe=on">Shanghai<br>
+					Jing An District<br>
+					Phone: XXX-XXX-XXXX<br>
+					Fax: XXX-XXX-YYYY</p>
+					</address>
+
+					<!-- <h3>Social</h3>
+					<li class="social"> 
+					<a href="#"><i class="fa fa-facebook-square fa-size"> </i></a>
+					<a href="#"><i class="fa  fa-twitter-square fa-size"> </i> </a> 
+					<a href="#"><i class="fa fa-google-plus-square fa-size"> </i></a>
+					<a href="#"><i class="fa fa-flickr fa-size"> </i> </a>
+					</li>
+				</div> -->
+			<!--</div>
+		</div> 
+	</div> -->
+	
+	
+	
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="footer-title">Actionable Data</div>
+            <p>
+            	<ul>
+					
+					<li><a href="#services">Approach</a></li>
+					<li><a href="#projects">Projects</a></li>
+				    <li><a href="#about">About</a></li> 
+					<li><a href="#contact">Contact</a></li>
+					
+				</ul> 
+			</p>
+            <!-- p>Vuoi ricevere news su altri template?<br/>
+              Visita Andrea Galanti.it e vedrai tutte le news riguardanti nuovi Theme!<br/>
+              Go to: <a  href="http://andreagalanti.it" target="_blank">andreagalanti.it</a>
+            </p>-->
+			
+			
+          </div> 
+          <!-- /col-xs-7 -->
+
+          <div class="col-md-5">
+            <div class="footer-banner">
+              <h3 class="footer-title">Contact</h3>
+              <ul>
+                <li>Email: hello at actionabledata.net</li>
+<!-- 	            <li>Wechat: Actionable Data</li>
+ -->			<li><a href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a></li>
+             </ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="static/js/jquery-1.10.2.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+	<script src="static/js/owl.carousel.js"></script>
+	<script src="static/js/script.js"></script>
+	<!-- StikyMenu -->
+	<script src="static/js/stickUp.min.js"></script>
+	<script type="text/javascript">
+	  jQuery(function($) {
+		$(document).ready( function() {
+		  $('.navbar-default').stickUp();
+		  
+		});
+	  });
+	
+	</script>
+	<!-- Smoothscroll -->
+	<script type="text/javascript" src="static/js/jquery.corner.js"></script> 
+	<script src="static/js/wow.min.js"></script>
+	<script>
+	 new WOW().init();
+	</script>
+	<script src="static/js/classie.js"></script>
+	<script src="static/js/uiMorphingButton_inflow.js"></script>
+	<!-- Magnific Popup core JS file -->
+	<script src="static/js/jquery.magnific-popup.js"></script> 
+</body>
+
+</html>
