@@ -423,38 +423,15 @@ NO MORE TABLES!! ;)
 
 /* --- Actionable Data Modern Solution & Roadmap Styles --- */
 
-/* Solutions Grid & Flexbox Equal-Height Alignment */
-.solutions-row {
-	display: -ms-grid !important;
-	display: grid !important;
-	grid-template-columns: repeat(3, 1fr) !important;
-	gap: 30px !important;
-	margin-left: 0 !important;
-	margin-right: 0 !important;
-}
-
-.solutions-row:before,
-.solutions-row:after {
-	display: none !important;
-	content: none !important;
-}
-
-/* Ensure each column in solutions row stretches to equal height without floating issues */
-.solutions-row > [class*='col-'] {
-	width: 100% !important;
-	max-width: 100% !important;
-	padding: 0 !important;
-	margin: 0 !important;
-	float: none !important;
-	display: -webkit-box !important;
-	display: -webkit-flex !important;
-	display: -ms-flexbox !important;
-	display: flex !important;
-	-webkit-box-orient: vertical !important;
-	-webkit-box-direction: normal !important;
-	-webkit-flex-direction: column !important;
-	-ms-flex-direction: column !important;
-	flex-direction: column !important;
+/* Solutions Grid Equal-Height Alignment */
+.solutions-grid {
+	display: -ms-grid;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	width: 100%;
+	margin: 35px 0 10px;
+	clear: both;
 }
 
 .solution-card {
@@ -676,9 +653,9 @@ NO MORE TABLES!! ;)
 }
 
 @media (max-width: 991px) {
-	.solutions-row {
-		grid-template-columns: repeat(2, 1fr) !important;
-		gap: 20px !important;
+	.solutions-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
 	}
 	.journey-grid > [class*='col-'] {
 		margin-bottom: 15px;
@@ -686,9 +663,9 @@ NO MORE TABLES!! ;)
 }
 
 @media (max-width: 767px) {
-	.solutions-row {
-		grid-template-columns: 1fr !important;
-		gap: 20px !important;
+	.solutions-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
 	}
 }
 
